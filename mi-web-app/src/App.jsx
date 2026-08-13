@@ -1,19 +1,7 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import CustomCursor from "./components/CustomCursor";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div className="bg-black min-h-screen flex flex-col">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Contact />
-      <CustomCursor />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
