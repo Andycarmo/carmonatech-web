@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./variables.css";
-@import "./typography.css";
-@import "./animations.css";
-@import "./scrollbar.css";
+:root {
+  --background: #050816;
+  --text: #ffffff;
+}
 
 *{
   margin:0;
@@ -21,15 +21,12 @@ body{
   background:var(--background);
   color:var(--text);
   overflow-x:hidden;
+  font-family: sans-serif;
 }
 
 a{
   text-decoration:none;
   color:inherit;
-}
-
-button{
-  font-family:inherit;
 }
 
 img{
