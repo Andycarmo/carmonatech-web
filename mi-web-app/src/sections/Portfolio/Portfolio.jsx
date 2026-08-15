@@ -7,7 +7,7 @@ function Portfolio() {
 
     <section
       id="portfolio"
-      className="py-32 bg-[#090B1A]"
+      className="py-24 bg-[#090B1A]"
     >
 
       <div className="max-w-7xl mx-auto px-8">
@@ -25,7 +25,7 @@ function Portfolio() {
           ingeniería mecánica, diseño CAD y desarrollo de software.
         </p>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-16">
 
           {portfolio.map(project => (
 

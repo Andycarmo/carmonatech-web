@@ -48,11 +48,26 @@ export default Navbar;*/
 import { motion } from "framer-motion";
 
 const links = [
-  "Inicio",
-  "Servicios",
-  "Proyectos",
-  "Sobre mí",
-  "Contacto",
+  {
+    name: "Inicio",
+    href: "#home",
+  },
+  {
+    name: "Servicios",
+    href: "#services",
+  },
+  {
+    name: "Proyectos",
+    href: "#portfolio",
+  },
+  {
+    name: "Sobre mí",
+    href: "#experience",
+  },
+  {
+    name: "Contacto",
+    href: "#contact",
+  },
 ];
 
 export default function Navbar() {
@@ -79,87 +94,84 @@ export default function Navbar() {
     shadow-[0_10px_40px_rgba(0,0,0,.25)]
   "
 >
-        {/* LOGO */}
+     {/* LOGO */}
 
-        <div className="flex items-center gap-3">
+        <a
+          href="#home"
+          className="flex items-center gap-3"
+        >
           <div
             className="
-            h-3
-            w-3
-            rounded-full
-
-            bg-blue-500
-
-            shadow-[0_0_20px_#3B82F6]
+              h-3
+              w-3
+              rounded-full
+              bg-blue-500
+              shadow-[0_0_20px_#3B82F6]
             "
           />
 
           <h1
             className="
-            font-bold
-            text-xl
-            tracking-wide
-            text-white
+              font-bold
+              text-xl
+              tracking-wide
+              text-white
             "
           >
             Carmona<span className="text-blue-400">Tech</span>
           </h1>
-        </div>
+        </a>
 
         {/* LINKS */}
 
         <ul className="hidden md:flex items-center gap-10">
-          {links.map((item) => (
-            <li
-              key={item}
-              className="
-              text-gray-300
+          {links.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="
+                  text-gray-300
+                  hover:text-white
+                  duration-300
+                  cursor-pointer
+                  relative
 
-              hover:text-white
+                  after:absolute
+                  after:left-0
+                  after:-bottom-1
+                  after:h-[2px]
+                  after:w-0
+                  after:bg-blue-500
+                  after:duration-300
 
-              duration-300
-
-              cursor-pointer
-
-              relative
-
-              after:absolute
-              after:left-0
-              after:-bottom-1
-              after:h-[2px]
-              after:w-0
-
-              after:bg-blue-500
-
-              after:duration-300
-
-              hover:after:w-full
-              "
-            >
-              {item}
+                  hover:after:w-full
+                "
+              >
+                {link.name}
+              </a>
             </li>
           ))}
         </ul>
 
-        <button
+        {/* CTA */}
+
+        <a
+          href="https://wa.me/+573214649248?text=Hola%20Andrés,%20vi%20tu%20sitio%20web%20y%20me%20gustaría%20hablar%20contigo."
+          target="_blank"
+          rel="noopener noreferrer"
           className="
-          hidden
-          lg:block
-
-          px-5
-          py-2.5
-
-          rounded-xl
-
-          bg-blue-600
-
-          hover:bg-blue-500
-
-          duration-300
+            hidden
+            lg:block
+            px-5
+            py-2.5
+            rounded-xl
+            bg-blue-600
+            hover:bg-blue-500
+            duration-300
           "
         >
           Hablemos
-        </button>
+        </a>
       </nav>
     </motion.header>
   );

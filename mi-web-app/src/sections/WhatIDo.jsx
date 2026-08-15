@@ -29,7 +29,7 @@ export default function WhatIDo() {
 
         <section
             id="services"
-            className="py-32"
+            className="py-24"
         >
 
             <div className="max-w-7xl mx-auto px-8">

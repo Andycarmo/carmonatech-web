@@ -15,7 +15,7 @@ export default function WorkingWithMe(){
 
 return(
 
-<section className="py-32">
+<section className="py-24">
 
 <div className="max-w-7xl mx-auto px-8">
 

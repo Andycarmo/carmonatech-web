@@ -58,7 +58,9 @@ export default function Experience(){
 
 return(
 
-<section className="py-32">
+<section 
+id="experience"
+className="py-24">
 
 <div className="max-w-6xl mx-auto px-8">
 

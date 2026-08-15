@@ -4,7 +4,7 @@ function FooterCTA() {
 
   return (
 
-    <section className="max-w-7xl mx-auto px-8 py-24 text-center">
+    <section id="contact" className="max-w-7xl mx-auto px-8 py-24 text-center">
 
       <span className="text-blue-400 uppercase tracking-[0.3em] text-sm">
 

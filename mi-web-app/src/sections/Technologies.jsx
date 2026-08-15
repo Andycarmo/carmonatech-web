@@ -4,7 +4,7 @@ import {
     SiFlutter,
     SiGit,
     SiGithub,
-    SiVite,
+    SiVite
 } from "react-icons/si";
 
 import {
@@ -12,8 +12,34 @@ import {
     FiCpu,
     FiSettings,
     FiCode,
-    FiBox
+    FiBox,
+    FiImage,
+    FiPenTool
 } from "react-icons/fi";
+
+const industrial = [
+    {
+        icon: <FiSettings />,
+        name: "Mantenimiento Industrial"
+    },
+    //{
+    //    icon: <FiCpu />,
+    //    name: "Automatización"
+    //},
+    {
+        icon: <FiTool />,
+        name: "Análisis de Fallas"
+    },
+    {
+        icon: <FiSettings />,
+        name: "Mejora Continua"
+    },
+    {
+        icon: <FiTool />,
+        name: "Documentación Técnica"
+    }
+
+];
 
 const cad = [
     {
@@ -24,10 +50,18 @@ const cad = [
         icon: <SiAutodesk />,
         name: "AutoCAD / Revit"
     },
-    {
-        icon: <FiTool />,
-        name: "FreeCAD"
-    }
+      {
+    icon: <FiImage />,
+    name: "Photoshop"
+  },
+  {
+    icon: <FiPenTool />,
+    name: "Illustrator"
+  }
+    //{
+    //    icon: <FiTool />,
+     //   name: "FreeCAD"
+    //}
 ];
 
 const software = [
@@ -35,10 +69,10 @@ const software = [
         icon: <SiReact />,
         name: "React"
     },
-    {
-        icon: <SiFlutter />,
-        name: "Flutter"
-    },
+    //{
+    //    icon: <SiFlutter />,
+    //    name: "Flutter"
+    //},
     {
         icon: <SiGit />,
         name: "Git"
@@ -57,34 +91,14 @@ const software = [
     }
 ];
 
-const industrial = [
-    {
-        icon: <FiSettings />,
-        name: "Mantenimiento Industrial"
-    },
-    {
-        icon: <FiCpu />,
-        name: "Automatización"
-    },
-    {
-        icon: <FiTool />,
-        name: "Análisis de Fallas"
-    },
-    {
-        icon: <FiSettings />,
-        name: "Mejora Continua"
-    },
-    {
-        icon: <FiTool />,
-        name: "Documentación Técnica"
-    }
-];
+
+
 
 export default function Technologies() {
 
     return (
 
-<section className="py-32">
+<section className="py-24">
 
 <div className="max-w-7xl mx-auto px-8">
 
@@ -107,7 +121,12 @@ Estas son las tecnologías y metodologías que utilizo para desarrollar proyecto
 <div className="grid lg:grid-cols-3 gap-8">
 
 <Card
-title="Diseño CAD"
+title="Ingeniería"
+items={industrial}
+/>
+
+<Card
+title="Diseño / CAD"
 items={cad}
 />
 
@@ -116,10 +135,7 @@ title="Desarrollo"
 items={software}
 />
 
-<Card
-title="Ingeniería"
-items={industrial}
-/>
+
 
 </div>
 
