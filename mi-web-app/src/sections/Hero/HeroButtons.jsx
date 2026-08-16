@@ -19,7 +19,7 @@ flex-wrap
 
 <Button>
 
-Explore Projects
+Ver Proyectos
 
 </Button>
 
@@ -29,7 +29,7 @@ variant="secondary"
 
 >
 
-Contact Me
+Hablemos
 
 </Button>
 
